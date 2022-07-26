@@ -1,0 +1,68 @@
+.site {
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  border-style: solid;
+  color: cornflowerblue;
+}
+
+.title {
+  text-align: center;
+
+  border-style: solid;
+  border-left: 0ch;
+  border-top: 0ch;
+  border-right: 0ch;
+}
+
+.first-input {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.second-input {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.third-input {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+input {
+  border-radius: 5px;
+  border-color: cornflowerblue;
+  width: 30vw;
+  height: 5vw;
+}
+
+.addrIn {
+  width: 70vw;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+button {
+  width: 90vw;
+  height: 5vw;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 5px;
+}
+
+.error-message {
+  position: absolute;
+  color: red;
+  font-size: 12px;
+}

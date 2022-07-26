@@ -1,0 +1,59 @@
+<div [formGroup]="jobForm" class="site">
+  <div class="title">
+    <h1>Job Aplication</h1>
+    <h3>Enter your information below</h3>
+  </div>
+
+  <div class="first-input">
+    <div class="nameClass">
+      <p>Name</p>
+      <input formControlName="name" type="text" />
+      <p class="error-message" *ngIf="validateInput('name')">
+        Please enter your name.
+      </p>
+    </div>
+    <div class="surname">
+      <p>Surname</p>
+      <input formControlName="sname" type="text" />
+      <p class="error-message" *ngIf="validateInput('sname')">
+        Please enter your surname.
+      </p>
+    </div>
+  </div>
+  <div class="second-input">
+    <div class="email">
+      <p>Email</p>
+      <input type="text" formControlName="mail" />
+      <p class="error-message" *ngIf="validateInput('mail')">
+        Please enter valid email.
+      </p>
+    </div>
+    <div class="idnum">
+      <p>ID number</p>
+      <input
+        (keypress)="IDValidator($event)"
+        type="text"
+        formControlName="idNum"
+      />
+      <p class="error-message" *ngIf="validateInput('idNum')">
+        Please enter your ID number.
+      </p>
+    </div>
+  </div>
+
+  <div class="third-input">
+    <div class="addr">
+      <p>Address</p>
+      <input formControlName="adrs" class="addrIn" type="text" />
+      <p class="error-message" *ngIf="validateInput('adrs')">
+        Please enter your address.
+      </p>
+    </div>
+  </div>
+
+  <div class="btn">
+    <button [disabled]="!jobForm.valid" (click)="redirectToCongrats()">
+      Submit
+    </button>
+  </div>
+</div>
